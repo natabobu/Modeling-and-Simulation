@@ -1,0 +1,13 @@
+setwd("E:/Univ/Info3/Modelare si Simulare/")
+sun=read.csv("Sunspots.csv")
+par(mfrow=c(2,2))
+plot(sun)
+hist(sun)
+acf(sun)
+boxplot(sun)
+
+library(trend)
+library(Kendall)
+MannKendall(sun)
+mk.test(sun)
+sens.slope(sun)
