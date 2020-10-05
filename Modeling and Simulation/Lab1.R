@@ -1,0 +1,69 @@
+#ex.1,a)
+lct=c(191,180,192,196,204,190,196)
+tb=c(0,0,0,0,'NA',0,'NA')
+print(lct)
+print(tb)
+#ex.1, b)
+med=mean(lct)
+print(med)
+#ex.2)
+farm=c('AL','AL','AL','AL','AL','AL','AL')
+month=c(10,10,10,10,10,10,10)
+boar=cbind(month,lct,tb)
+print(boar)
+#ex.3)
+D<-matrix(c(1,2,3,4,2,1,2,3,0),nrow=3,ncol=3)
+T<-t(D)
+det=det(D)
+if(det!=0){
+  inv=solve(D)
+  print(inv)
+}
+#ex.4)
+tab.data=data.frame(Farm=c('AL','AL','AL','AL','AL','AL','AL'),
+                    Month=c(10,10,10,10,10,10,10),
+                    Year=c(00,00,00,00,00,00,00),
+                    Sex=c(1,1,1,1,1,1,1),
+                    Class=c(4,4,3,4,4,4,4),
+                    LCT=c(191,180,192,196,204,190,196),
+                    KFI=c(20.45,16.4,15.9,17.3,"NA",16.3,22.2),
+                    Ecervi=c(0,0,2.38,0,0,0,1.21),
+                    TB=c(0,0,0,0,'NA',0,'NA'))
+print(tab.data)
+#ex.5,a)
+timp=c(17,16,20,24,22,15,21,15,17,22)
+print(sum(timp))
+print(max(timp))
+print(mean(timp))
+print(min(timp))
+#ex.5,b)
+timp=replace(timp,timp==24,18)
+print(timp)
+print(max(timp))
+#ex.5,c)
+naveta<-c(17, 16, 20, 24, 22, 15, 21, 15, 17, 22)
+print(sum(naveta))
+print(sum(naveta>20))
+#ex.6)
+factura=c(46,33,39,37,46,30,48,32,49,35,30,48)
+print(sum(factura))
+print(min(factura))
+print(max(factura))
+print(sum(factura>40))
+print(sum(factura>40)/12*100)
+#ex.7)
+x=c(1,8,2,6,3,8,5,5,5,5)
+print(x)
+#ex.7a)
+print(sum(x)/10)
+#ex.7.b)
+for(val in x){
+  print(log(val))
+}
+#ex.7,c)
+for(val in x){
+  print((val-4.4)/2.875)
+}
+#ex.7,d)
+print(max(x)-min(x))
+
